@@ -1,14 +1,23 @@
 //Form left side
 import "./form.css";
 import Personal from "../personal/personal";
-function FormCreation({ personalInfo, setpersonalInfo }) {
+import Education from "../education/education";
+function FormCreation({
+  personalInfo,
+  setpersonalInfo,
+  educationInfo,
+  setEducaitonInfo,
+}) {
   return (
     <div className="LeftSide">
       <Personal
         personalInfo={personalInfo}
         setpersonalInfo={setpersonalInfo}
       ></Personal>
-      <div>blank 2</div>
+      <Education
+        educationInfo={educationInfo}
+        setEducaitonInfo={setEducaitonInfo}
+      ></Education>
       <div>blank 3</div>
       <div>blank 4</div>
     </div>
