@@ -1,0 +1,9 @@
+.skills{
+    max-height: 1000px;
+    overflow: hidden;
+}
+
+.skills.closed{
+transition: ease .5s max-height;
+    height: 0px;
+}

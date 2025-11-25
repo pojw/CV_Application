@@ -1,6 +1,7 @@
 //right output side
 
-function OutPutDisplay({ personalInfo }) {
+function OutPutDisplay({ personalInfo,        skillsInfo
+, educationInfo, experInfo }) {
   return (
     <div>
       <div>
@@ -19,6 +20,57 @@ function OutPutDisplay({ personalInfo }) {
         <div>Address</div>
         <div>{personalInfo.address}</div>
       </div>
+
+      {educationInfo.map((value) => (
+        <div key={value.id}>
+          <div>
+            <div>School</div>
+            <div>{value.school}</div>
+          </div>
+          <div>
+            <div>Degree</div>
+            <div>{value.degree}</div>
+          </div>
+          <div>
+            <div>Start Date</div>
+            <div>{value.start}</div>
+          </div>
+          <div>
+            <div>End Date</div>
+            <div>{value.end}</div>
+          </div>
+        </div>
+      ))}
+      {experInfo.map((value) => (
+        <div>
+          <div>
+            <div>Position</div>
+            <div>{value.position}</div>
+          </div>
+          <div>
+            <div>Company</div>
+            <div>{value.company}</div>
+          </div>
+          <div>
+            <div>Start</div>
+            <div>{value.start}</div>
+          </div>
+          <div>
+            <div>End</div>
+            <div>{value.end}</div>
+          </div>
+          <div>
+            <div>Description</div>
+            <div>{value.description}</div>
+          </div>
+        </div>
+      ))}
+      <div>Skills</div>
+      {skillsInfo.map((value)=>(
+        <div>
+         { value.name}
+        </div>
+      ))}
     </div>
   );
 }
