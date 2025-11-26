@@ -5,9 +5,9 @@ function InputDiv({ info, value, onChange }) {
   }
 
   return (
-    <div>
+    <div className="outer">
       <div>{info}</div>
-      <input
+      <input className="InputDiv"
         placeholder={`Enter ` + info}
         value={value}
         onChange={handleChange}

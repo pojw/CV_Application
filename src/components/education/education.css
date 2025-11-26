@@ -2,8 +2,65 @@
   max-height: 0px;
   transition: max-height 0.5s ease;
   overflow: hidden;
+      background-color: rgb(255, 253, 253);
+    border-radius: 10px;
+    height: 95%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display:grid;
+    gap:10px;
+    font-weight: 200;
+
+
+  
 }
 
 .education.open {
   max-height: 500px;
+}
+
+.educationSection{
+  text-align: center;
+  gap:10px;
+  display: grid;
+  font-weight: 600;
+
+
+}
+
+
+.education .InputDiv{
+    border-radius: 10px; 
+    border:0;
+    background-color: rgb(238, 237, 237);
+    height: 20px;
+}
+
+.education .outer{
+    display:grid;
+    align-items: center;
+    justify-content: center ;
+    text-align: left;
+            font-weight: 300;
+
+}
+
+.remove{
+  text-align: center;
+  font-weight: 600;
+  width: 25px;
+  height: 25px;
+  justify-self: center;
+}
+
+.add{
+    font-weight: 200;
+    width: 130px;
+    height: 25px;
+    align-items: center;
+    justify-self: center;
+    border-radius: 8px;
+    border:1.5px black solid
+
 }

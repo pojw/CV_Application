@@ -10,6 +10,7 @@ function Page() {
     email: "",
     phone: "",
     address: "",
+    closed:false
   });
   let [educationInfo, setEducaitonInfo] = useState([
     { id: uuidv4(), school: "", degree: "", start: "", end: "", closed: false },

@@ -1,0 +1,49 @@
+.personal{
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display:grid;
+    padding-bottom: 15px;
+      font-weight: 600;
+
+
+}
+.personalSection{
+      max-height: 0px;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+      background-color: rgb(255, 253, 253);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display:grid;
+    gap:10px;
+    font-weight: 200;
+        background-color: rgb(255, 253, 253);
+}
+
+.personal .InputDiv{
+    border-radius: 10px; 
+    border:0;
+    background-color: rgb(238, 237, 237);
+    height: 20px;
+
+}
+
+.personal .outer{
+    display:grid;
+    align-items: center;
+    justify-content: center ;
+    text-align: left;
+        font-weight: 300;
+            padding:5px
+
+
+}
+
+
+.personalSection.open{
+max-height: 700px;
+}

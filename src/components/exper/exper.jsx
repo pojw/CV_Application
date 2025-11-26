@@ -1,4 +1,5 @@
 //experince seciton
+import"./exper.css"
 import { v4 as uuidv4 } from "uuid";
 import InputDiv from "../textbox/textbox";
 function Exper({ experInfo, setexperInfo }) {
@@ -34,8 +35,8 @@ function Exper({ experInfo, setexperInfo }) {
     setexperInfo(clone);
   }
   return (
-    <div>
-      <div>Experince Section</div>
+    <div className="experSection">
+      <div >Experince Section</div>
       {experInfo.map((value, index) => (
         <div key={value.id}>
           <div
@@ -45,60 +46,56 @@ function Exper({ experInfo, setexperInfo }) {
           >
             {value.position || "Untitiled Position"} {value.closed ? "►" : "▼"}
           </div>
-          <div className={`education ${value.closed ? "open" : ""}`}>
+          <div className={`exper ${value.closed ? "open" : ""}`}>
             <InputDiv
-              info="position"
+              info="Position"
               value={value.position}
               onChange={(val) => {
                 handleChange(val, index, "position");
               }}
             ></InputDiv>
             <InputDiv
-              info="company"
+              info="Company"
               value={value.company}
               onChange={(val) => {
                 handleChange(val, index, "company");
               }}
             ></InputDiv>
             <InputDiv
-              info="start"
+              info="Start"
               value={value.start}
               onChange={(val) => {
                 handleChange(val, index, "start");
               }}
             ></InputDiv>
             <InputDiv
-              info="end"
+              info="End"
               value={value.end}
               onChange={(val) => {
                 handleChange(val, index, "end");
               }}
             ></InputDiv>
+       
             <InputDiv
-              info="location"
-              value={value.location}
-              onChange={(val) => {
-                handleChange(val, index, "location");
-              }}
-            ></InputDiv>
-            <InputDiv
-              info="description"
+              info="Description"
               value={value.description}
               onChange={(val) => {
                 handleChange(val, index, "description");
               }}
             ></InputDiv>
             <button
+            className="remove"
               onClick={() => {
                 remove(index);
               }}
             >
-              Remove
+              X
             </button>
           </div>
         </div>
       ))}
       <button
+      className="add"
         onClick={() => {
           NewExper();
         }}

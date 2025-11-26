@@ -1,4 +1,9 @@
 .LeftSide {
   display: grid;
-  border: 1px solid green;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(238, 237, 237);
+  gap:15px;
+  
+
 }

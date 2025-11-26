@@ -28,7 +28,7 @@ function Education({ educationInfo, setEducaitonInfo }) {
     setEducaitonInfo(clone);
   }
   return (
-    <div>
+    <div className="educationSection"> Education Section
       {educationInfo.map((value, index) => (
         <div key={value.id}>
           <div
@@ -82,16 +82,17 @@ function Education({ educationInfo, setEducaitonInfo }) {
               }}
             ></InputDiv>
             <button
+            className="remove"
               onClick={() => {
                 remove(index);
               }}
             >
-              Remove Education
+              X
             </button>
           </div>
         </div>
       ))}
-      <button onClick={NewEducation}>Add Education</button>
+      <button className="add" onClick={NewEducation}>Add Education</button>
     </div>
   );
 }

@@ -1,76 +1,73 @@
 //right output side
-
+import "./outPut.css"
 function OutPutDisplay({ personalInfo,        skillsInfo
 , educationInfo, experInfo }) {
   return (
-    <div>
-      <div>
-        <div>Name</div>
+    <div className="rightSide">
+      <div className="personalOut"> 
+         <div className="NameOut">
         <div>{personalInfo.name}</div>
       </div>
-      <div>
-        <div>email</div>
+      <div className="infoOut">
+           
         <div>{personalInfo.email}</div>
-      </div>
-      <div>
-        <div>Phone Number</div>
-        <div>{personalInfo.phone}</div>
-      </div>
-      <div>
-        <div>Address</div>
-        <div>{personalInfo.address}</div>
-      </div>
+                <div>{personalInfo.phone}</div>
+                        <div>{personalInfo.address}</div>
 
-      {educationInfo.map((value) => (
-        <div key={value.id}>
+
+      
+   </div>
+      </div>
+      
+    <div>
+      <div className="header">Education Section</div>
+    {educationInfo.map((value) => (
+        <div className="educationOut" key={value.id}>
           <div>
-            <div>School</div>
-            <div>{value.school}</div>
-          </div>
-          <div>
-            <div>Degree</div>
+            <div className="heavy">{value.school}</div>
             <div>{value.degree}</div>
+
           </div>
+
           <div>
-            <div>Start Date</div>
-            <div>{value.start}</div>
+            <div>{value.start}-{value.end}</div>
           </div>
-          <div>
-            <div>End Date</div>
-            <div>{value.end}</div>
-          </div>
+    
         </div>
       ))}
+    </div>
+        <div className="header"> Experince Section</div>
+
       {experInfo.map((value) => (
-        <div>
-          <div>
-            <div>Position</div>
-            <div>{value.position}</div>
-          </div>
-          <div>
-            <div>Company</div>
-            <div>{value.company}</div>
-          </div>
-          <div>
-            <div>Start</div>
-            <div>{value.start}</div>
-          </div>
-          <div>
-            <div>End</div>
-            <div>{value.end}</div>
-          </div>
-          <div>
-            <div>Description</div>
-            <div>{value.description}</div>
-          </div>
+        <div className="educationOut" key={value.id}>  
+        <div className="job"> 
+            <div>{value.start} </div>
+              
+           <div>{ value.end}</div>
+
+    
+
+        </div>
+
+          <div className="job">
+                        <div className="heavy">{value.company}</div>
+
+            <div className="heavy">{value.position}</div>
+                        <div>{value.description}</div>
+
+          
+        </div>
         </div>
       ))}
-      <div>Skills</div>
-      {skillsInfo.map((value)=>(
+      <div className="header">Skills</div>
+      <div className="skillOut">
+ {skillsInfo.map((value)=>(
         <div>
          { value.name}
         </div>
       ))}
+      </div>
+     
     </div>
   );
 }

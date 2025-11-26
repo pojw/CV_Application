@@ -27,17 +27,17 @@ function toggleClosed(){
   setstatus(clone)
 }
   return (
-    <div > 
+    <div className="skillsSection"> 
       <div onClick={toggleClosed}>Skills Section {status ? "►" : "▼"}</div>
-          <div  className={`skills ${status ?"closed":""}`}> 
+          <div  className={`skills ${status ?"open":""}`}> 
       {skillsInfo.map((value, index) => (
         <div>
-          <input
+          <input className="skillInput"
           placeholder="Skill"
           value={value.name}
           onChange={(e)=>{handleChange(e.target.value,index,"name")}}
           ></input>
-          <button onClick={()=>{Remove(index)}}>Remove</button>
+          <button  className ="remove" onClick={()=>{Remove(index)}}>X</button>
 
     </div>
 
@@ -46,7 +46,7 @@ function toggleClosed(){
 ))}
     </div>
 
-<button onClick={Add}>Add Skill</button>
+<button className="add" onClick={Add}>Add Skill</button>
     </div>
   );
 }
